@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="script/jquery.js"></script>
+    <script src="script/jquery-swapsies.js"></script>
+    <script src="script/sorting.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <aside>
+		<nav>
+			<a href="#home"><i class="material-icons md-36">home</i><p>Home</p></a>
+			<a href="#bubble"><i class="material-icons md-36">bubble_chart</i><p>Bubble</p></a>
+			<a href="#tree"><i class="material-icons md-36">device_hub</i><p>tree</p></a>
+		</nav>
+
+	</aside>
+
+	<nav class="mobile-nav">
+		<a href="#home">Home</a>
+		<a href="#bubble">Bubble</a>
+		<a href="#tree">tree</a>
+    </nav>
+    <main>
+        <header class="home" id="home">
+            <h1>Методы сортировки</h1>      
+        <p>Для понимания и реализации этот алгоритм — простейший, но эффективен он лишь для небольших массивов.</p>
+        <p>Алгоритм считается учебным и практически не применяется вне учебной литературы, вместо него на практике применяются более эффективные алгоритмы сортировки. В то же время метод сортировки
+         обменами лежит в основе некоторых более совершенных алгоритмов, таких как шейкерная сортировка, пирамидальная сортировка и быстрая сортировка (Спасибо википедия)</p>
+        </header>
+        <section class="bubble" id="bubble">
+	
+            <h2>Bubble</h2>
+            <p>Для понимания и реализации этот алгоритм — простейший, но эффективен он лишь для небольших массивов.</p>
+            <p>Алгоритм считается учебным и практически не применяется вне учебной литературы, вместо него на практике применяются более эффективные алгоритмы сортировки. В то же время метод сортировки
+            обменами лежит в основе некоторых более совершенных алгоритмов, таких как шейкерная сортировка, пирамидальная сортировка и быстрая сортировка (Спасибо википедия)</p>
+                <p>Пример реализации</p>
+            <h3>Инструкция:</h3>
+            <p>Чтобы сгенерировать массив, нажмите кнопку сгенерировать массив</p>
+            <p>Чтобы отсортировать массив, нажмите кнопку отсортировать массив</p>
+            <p class="button randomGenerate">Сгенерировать числа</p>
+		<p class="button sorting" disabled>Отсортировать числа</p>
+		<div id="numbers"></div>
+		<div id="info">
+			<p class="total"></p>
+			<p class="cur_step"></p>
+			Исходные числа: <p class="last_massiv"></p>
+        </div>
+        
+            <p>Мы тут не увидим ничего новенького, обычный сортировачный метод. <br/> Расскажу еще подробнее про него и про то как он работает и почему его не используют (если что, это я нашел на Хабре, не ругайте, пожалуйста)</p>
+            <p>К сожалению, скрипт <div>jquery-swapsies.js</div> я нашел на просторах интернета</p>
+        </section>
+        <section class="tree" id="tree">
+	<h2>Tree</h2>
+	<p>Проше прощения, вдеутся технические работы с сортировкой методом бинарного дерева. Прошу прощения за доставленные неудобства</p>
+        
+</section>
+        <footer>
+            <section class="top-bar">
+                
+		        <a href="https://github.com/Redizzzka/sorting">Github</a>
+            </section>
+            
+        </footer>
+    </main>
+</body>
+</html>
