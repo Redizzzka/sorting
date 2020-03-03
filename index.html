@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="script/jquery.js"></script>
     <script src="script/jquery-swapsies.js"></script>
-    <script src="script/sorting.js"></script>
+    <script src="script/sortingBubble.js"></script>
     
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <title>Document</title>
@@ -43,8 +43,8 @@
             <h3>Инструкция:</h3>
             <p>Чтобы сгенерировать массив, нажмите кнопку сгенерировать массив</p>
             <p>Чтобы отсортировать массив, нажмите кнопку отсортировать массив</p>
-            <p class="button randomGenerate">Сгенерировать числа</p>
-		<p class="button sorting" disabled>Отсортировать числа</p>
+            <p class="button randomGenerateBubble">Сгенерировать числа</p>
+		<p class="button sortingBubble" disabled>Отсортировать числа</p>
 		<div id="numbers"></div>
 		<div id="info">
 			<p class="total"></p>
@@ -53,12 +53,15 @@
         </div>
         
             <p>Мы тут не увидим ничего новенького, обычный сортировачный метод. <br/> Расскажу еще подробнее про него и про то как он работает и почему его не используют (если что, это я нашел на Хабре, не ругайте, пожалуйста)</p>
-            <p>К сожалению, скрипт <div>jquery-swapsies.js</div> я нашел на просторах интернета</p>
+            <p>К сожалению, скрипт  <a> jquery-swapsies.js</a> я нашел на просторах интернета</p>
         </section>
         <section class="tree" id="tree">
 	<h2>Tree</h2>
 	<p>Проше прощения, вдеутся технические работы с сортировкой методом бинарного дерева. Прошу прощения за доставленные неудобства</p>
-        
+        <p class="button randomGenerate" id="randomGenerate">Сгенерировать числа</p>
+        <p class="button randomGenerate" id="sorting" disabled>Отсортировать числа</p>
+        <p id="out_arr2"></p>
+        <p id="out_arr"></p>
 </section>
         <footer>
             <section class="top-bar">
@@ -68,5 +71,7 @@
             
         </footer>
     </main>
+    <script src="script/index.js"></script>
+    
 </body>
 </html>

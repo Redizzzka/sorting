@@ -36,7 +36,8 @@ aside {
     font-size: 36px;
 }
 a {
-    text-decoration: none;
+	text-decoration: none;
+	color: white;
 }
 aside a {
 	display: block;

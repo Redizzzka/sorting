@@ -3,8 +3,8 @@ $(document).ready(function(){
 	let array = [] //массив
 
 	//Генерация случайных чисел
-	$('.randomGenerate').click(function(){
-		$('.sorting').removeAttr('disabled').show() //делаем кнопку сортировки активной
+	$('.randomGenerateBubble').click(function(){
+		$('.sortingBubble').removeAttr('disabled').show() //делаем кнопку сортировки активной
 		$('#numbers,#info p').html('') //удаляем предыдущий массив и данные о состоянии сортировки
 		
 		
@@ -16,12 +16,12 @@ $(document).ready(function(){
 			randomNum = Math.round((Math.random() * 100)) //случайное число от минимального до максимального
 			$('#info .last_massiv').append(randomNum + ' ') //заполнение блока с исходными данными случайными числами
 			array[i] = randomNum //заполнение массива случайными числами
-			$('#numbers').append('<div class="num">' + randomNum + '</div>') //генерация "шаров" с числами
+			$('#numbers').append(`<div class="num">${randomNum}</div>`) //генерация "шаров" с числами
 		}
 	});
 
 	//Сортировка чисел через кнопку
-	$('.sorting').click(function(){
+	$('.sortingBubble').click(function(){
 		$('#info .cur_step').show() //информация о номере текущего прохода
 		$(this).attr('disabled','disabled') //делаем кнопку "Отсортировать числа" неактивной
 		step = 1 //задаем начальное значение для количество проходов
@@ -31,7 +31,7 @@ $(document).ready(function(){
 			
 			//проверяем количество выполненных проходов, чтобы остановить сортировку, когда выполнено 10 проходов
 			if( step < 11 ){
-				$('#info .cur_step').text('Текущий проход: ' + step + '/10') //выводим номер текущего прохода
+				$('#info .cur_step').text(`Текущий проход: ${step}/10`) //выводим номер текущего прохода
 				step++ //увеличиваем значение проходов
 				i = 1 //задаем проход по каждому числу
 				$('#info .total').text('Идет сортировка...');
@@ -42,8 +42,8 @@ $(document).ready(function(){
 						if(array[i] < array[i-1] ){ 
 							num1 = i
 							num2 = i-1 
-							obj1 = $('#numbers .num:eq('+ num1 +')')
-							obj2 = $('#numbers .num:eq('+ num2 +')')	
+							obj1 = $(`#numbers .num:eq( ${num1} )`)
+							obj2 = $(`#numbers .num:eq( ${num2} )`)	
 							obj1.swap(obj2); //меняем (визуально) (obj1) с (obj2)
 							
 							//обмениваем числа в массиве
@@ -51,7 +51,7 @@ $(document).ready(function(){
 							array[i] = array[i-1]
 							array[i-1] = change_obj
 							
-							timeoutID = setTimeout(arguments.callee, 700) //выполняем обмен с задержкой в 0.7
+							timeoutID = setTimeout(arguments.callee, 1000) //выполняем обмен с задержкой в 1
 						} else {
 							timeoutID = setTimeout(arguments.callee, 0) //Если не надо обменивать число, то время задержки 0
 						}
@@ -59,7 +59,7 @@ $(document).ready(function(){
 					} else { //если все числа проверены, то отменяем задачу на выполнение интервала
 						clearInterval(intervalID) 
 						sorting()  //запускаем функцию сортировки
-						intervalID = setInterval(sorting, 7000) //запускаем выполнение функции sorting с интервалом в 7 секунд
+						intervalID = setInterval(sorting, 10000) //запускаем выполнение функции sorting с интервалом в 10 секунд
 					}
 				})()
 			} else {
