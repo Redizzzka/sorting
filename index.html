@@ -7,8 +7,11 @@
     <script src="script/jquery.js"></script>
     <script src="script/jquery-swapsies.js"></script>
     <script src="script/sortingBubble.js"></script>
+    <script src="script/d3.min.js"></script>
+   
     
     <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="style/style2.css">
     <title>Document</title>
 </head>
 <body>
@@ -58,10 +61,19 @@
         <section class="tree" id="tree">
 	<h2>Tree</h2>
 	<p>Проше прощения, вдеутся технические работы с сортировкой методом бинарного дерева. Прошу прощения за доставленные неудобства</p>
-        <p class="button randomGenerate" id="randomGenerate">Сгенерировать числа</p>
-        <p class="button randomGenerate" id="sorting" disabled>Отсортировать числа</p>
-        <p id="out_arr2"></p>
-        <p id="out_arr"></p>
+    <div class="TreeSort">
+    <div id="buttonsContainer">
+        <button id="start">Начать</button>
+        <button id="reset">Сброс</button>
+        <button id="desctiption">Описание</button>
+     </div>
+     
+     <div id="chart">
+        <div id="unsortedValues"></div>
+        <div id="svgContainer"></div>
+        <div id="sortedValues"></div>
+     </div>
+    </div>
 </section>
         <footer>
             <section class="top-bar">
@@ -71,7 +83,7 @@
             
         </footer>
     </main>
-    <script src="script/index.js"></script>
+    
     
 </body>
 </html>
