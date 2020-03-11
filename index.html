@@ -8,10 +8,10 @@
     <script src="script/jquery-swapsies.js"></script>
     <script src="script/sortingBubble.js"></script>
     <script src="script/d3.min.js"></script>
+    <script src="script/tree.js"></script>
    
     
     <link rel="stylesheet" type="text/css" href="style/style.css">
-    <link rel="stylesheet" type="text/css" href="style/style2.css">
     <title>Document</title>
 </head>
 <body>
@@ -46,8 +46,8 @@
             <h3>Инструкция:</h3>
             <p>Чтобы сгенерировать массив, нажмите кнопку сгенерировать массив</p>
             <p>Чтобы отсортировать массив, нажмите кнопку отсортировать массив</p>
-            <p class="button randomGenerateBubble">Сгенерировать числа</p>
-		<p class="button sortingBubble" disabled>Отсортировать числа</p>
+            <button class="button randomGenerateBubble">Сгенерировать числа</button>
+		<button class="button sortingBubble" disabled>Отсортировать числа</button>
 		<div id="numbers"></div>
 		<div id="info">
 			<p class="total"></p>
@@ -61,6 +61,19 @@
         <section class="tree" id="tree">
 	<h2>Tree</h2>
 	<p>Проше прощения, вдеутся технические работы с сортировкой методом бинарного дерева. Прошу прощения за доставленные неудобства</p>
+    
+    <div id="buttonsContainer">
+        <button class="button" id="start">Начать</button>
+        <button class="button" id="reset">Сброс</button>
+     </div>
+     <div class="TreeSort">
+     <div id="chart">
+        <div id="unsortedValues"></div>
+        <div id="svgContainer"></div>
+        <a>Отсортированные числа</a>
+        <div id="sortedValues"></div>
+     </div>
+    </div>
 </section>
         <footer>
             <section class="top-bar">
@@ -70,6 +83,7 @@
             
         </footer>
     </main>
+    
     
     
 </body>
